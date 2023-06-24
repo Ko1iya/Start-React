@@ -1,41 +1,28 @@
 import "./indexs.scss"
 import "./form.scss"
-import Persons from "./components/Persons"
-import Counter from "./components/Counter"
-import Button from "./components/Button"
+import FormToDo from "./components/FormToDo"
+import Buttons from "./components/Buttons"
+import Todos from "./components/Todos"
 import { useState } from "react"
-import ResetBut from "./components/ResetBut"
-import Form from "./components/Form"
-import CounterInterval from "./components/CounterInterval"
-import Post from "./components/Posts"
-import Posts from "./components/Posts"
+import Todo from "./components/Todo"
+
 const App = () => {
-  const [count, setCount] = useState(0)
-  // const [countInterval, setCountInterval] = useState(0)
+  const [arrTodos, setArrTodos] = useState([])
+  const [inputValue, setInputValue] = useState("Новая задача")
 
-  // setInterval(() => setCountInterval(countInterval + 1), 2000)
-
-  function upCount() {
-    setCount(count + 1)
-  }
-
-  function reset() {
-    setCount(0)
-  }
+  console.log(arrTodos)
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <Posts />
-      <Counter count={count} />
-      <CounterInterval />
-      {/* <Counter count={countInterval} /> */}
-      <div className='myContainer'>
-        <Button text='Click me' onClick={upCount} />
-        <Button text='Click meee!!' onClick={upCount} />
-      </div>
-      <ResetBut count={count} onClick={reset} />
-
-      <Form />
+    <div className='app'>
+      <header className='myHeader'>Todo List</header>
+      <FormToDo
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        arrTodos={arrTodos}
+        setArrTodos={setArrTodos}
+      />
+      <Buttons />
+      <Todos arrTodos={arrTodos} />
     </div>
   )
 }

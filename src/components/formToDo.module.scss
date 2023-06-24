@@ -1,0 +1,38 @@
+.formToDo {
+  text-align: center;
+}
+
+.inp {
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  padding: 6px 6px 6px 10px;
+  background: #ffbeeb;
+  border: none;
+  color: #d023a1;
+  border-radius: 17px;
+  margin-right: 20px;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.but {
+  width: 90px;
+  height: 30px;
+  font-size: 18px;
+  padding: 6px 6px 6px 10px;
+  background: #ffbeeb;
+  border: none;
+  color: #d023a1;
+  border-radius: 17px;
+  padding-bottom: 24px;
+  cursor: pointer;
+  border: 1px solid;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background: #ff8adf;
+  }
+}

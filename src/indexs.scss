@@ -1,4 +1,22 @@
 $base-colors: #e08bb5;
+body {
+  background: #ffc7e4;
+}
+.myHeader {
+  font-size: 40px;
+
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.app {
+  flex-direction: column;
+  font-size: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
 
 .but {
   margin: 0 auto;
@@ -34,13 +52,6 @@ $base-colors: #e08bb5;
 
   justify-content: space-around;
   align-items: center;
-}
-
-.app {
-  font-size: 50px;
-  padding-top: 100px;
-  display: flex;
-  justify-content: space-around;
 }
 
 img {
