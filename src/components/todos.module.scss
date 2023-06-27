@@ -9,6 +9,7 @@
 .todo {
   background: rgb(255 204 252);
   width: max-content;
+
   padding: 10px 10px 10px 35px;
   border-radius: 10px;
   border: 1px solid #debdff;
@@ -49,4 +50,9 @@
 
 .ok {
   background-image: url("../img/ok.svg");
+}
+
+.todoDone {
+  background: rgb(255, 204, 252, 0);
+  text-decoration: line-through;
 }

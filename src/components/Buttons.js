@@ -1,9 +1,9 @@
 import styles from "./buttons.module.scss"
-function Buttons() {
+function Buttons({ reset, clearDone }) {
   return (
     <div className={styles.buttons}>
-      <button className={styles.trash}></button>
-      <button className={styles.reset}></button>
+      <button className={styles.trash} onClick={clearDone}></button>
+      <button className={styles.reset} onClick={reset}></button>
     </div>
   )
 }

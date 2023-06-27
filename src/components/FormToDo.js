@@ -1,24 +1,16 @@
+import { v4 as uuidv4 } from "uuid"
 import { useState } from "react"
 import styles from "./formToDo.module.scss"
 import Todo from "./Todo"
 function FormToDo(props) {
-  const { inputValue, setInputValue, arrTodos, setArrTodos } = props
+  const { arrTodos, setArrTodos } = props
+  const [inputValue, setInputValue] = useState("Новая задача")
 
   function handleFormSubmit(event) {
     event.preventDefault()
+    setArrTodos([...arrTodos, { inputValue, done: false, id: uuidv4() }])
   }
 
-  function writing() {
-    setArrTodos(
-      (() => {
-        arrTodos.push(inputValue)
-        const newArr = arrTodos
-        return newArr
-      })()
-    )
-
-    setInputValue("Новая задача")
-  }
   // как Достучаться до value с родительского
 
   return (
@@ -29,7 +21,7 @@ function FormToDo(props) {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <button className={styles.but} onClick={writing}>
+      <button type='submit' className={styles.but}>
         Submit
       </button>
     </form>
